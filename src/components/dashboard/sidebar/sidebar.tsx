@@ -16,25 +16,25 @@ const Sidebar = () => {
         </p>
 
         <Menu.Item key="15">
-          <Link to="staff/teachers">-O'qtuvchilar royhati</Link>
+          <Link to="/teachers">-O'qtuvchilar royhati</Link>
         </Menu.Item>
         <Menu.Item key="16">
-          <Link to="staff/students">-Oquvchilar royhati</Link>
+          <Link to="/students">-Oquvchilar royhati</Link>
         </Menu.Item>
         <Menu.Item key="17">
-          <Link to="staff/problems">-Shikoyatlar</Link>
+          <Link to="/problems">-Shikoyatlar</Link>
         </Menu.Item>
         <Menu.Item key="18">
-          <Link to="staff/courses">-Kurslar</Link>
+          <Link to="/courses">-Kurslar</Link>
         </Menu.Item>
         <Menu.Item key="19">
-          <Link to="staff/transactions">-To'lovlar</Link>
+          <Link to="/transactions">-To'lovlar</Link>
         </Menu.Item>
         <Menu.Item key="20">
-          <Link to="staff/contracts">-Shartnomalar</Link>
+          <Link to="/contracts">-Shartnomalar</Link>
         </Menu.Item>
         <Menu.Item key="21">
-          <Link to="staff/notifications">-Habarlar</Link>
+          <Link to="/notifications">-Habarlar</Link>
         </Menu.Item>
       </Menu>
     </div>
