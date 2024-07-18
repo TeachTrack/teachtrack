@@ -1,6 +1,6 @@
 
 import { Button, Result } from "antd"
-const ServerEror = () => {
+const ServerError = () => {
   return (
     <Result
     status="500"
@@ -11,4 +11,4 @@ const ServerEror = () => {
   )
 }
 
-export default ServerEror
+export default ServerError 
