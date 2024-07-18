@@ -1,0 +1,18 @@
+{
+  "sidebar": {
+    "staff": "Персонал",
+    "students_list": "Список учеников",
+    "teachers_list": "Список учителей",
+    "complains": "Жалобы",
+    "courses": "Курсы",
+    "transactions": "Транзакции",
+    "contracts": "Контракты",
+    "notifications": "Уведомления"
+  },
+  "login": {
+    "login_to_crm": "Вход в панель управления",
+    "phone_number": "Ваш номер телефона",
+    "password": "Пароль",
+    "login": "Войти"
+  }
+}

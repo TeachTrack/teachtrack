@@ -1,0 +1,18 @@
+{
+  "sidebar": {
+    "staff": "Xodim",
+    "students_list": "O'quvchilar royhati",
+    "teachers_list": "O'qituvchilar royhati",
+    "complains": "Shikoyatlar",
+    "courses": "Kurslar",
+    "transactions": "To'lovlar",
+    "contracts": "Shartnomalar",
+    "notifications": "Xabarlar"
+  },
+  "login": {
+    "login_to_crm": "Boshqaruv paneliga kirish",
+    "phone_number": "Telefon raqamingiz",
+    "password": "Parol",
+    "login": "Kirish"
+  }
+}
