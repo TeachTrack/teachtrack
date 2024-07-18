@@ -1,4 +1,3 @@
-
 import { Button, Result } from 'antd'
 const AccessDenied = () => {
     return (

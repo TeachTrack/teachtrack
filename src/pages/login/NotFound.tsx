@@ -1,7 +1,4 @@
-
-
 import { Button, Result } from "antd"
-
 const NotFound = () => {
     return (
         <Result
