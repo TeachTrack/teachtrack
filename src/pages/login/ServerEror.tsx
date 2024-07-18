@@ -1,5 +1,4 @@
-// import { Link } from "react-router-dom"
-// import ServerE from "./../../assets/500.svg"
+
 import { Button, Result } from "antd"
 const ServerEror = () => {
   return (

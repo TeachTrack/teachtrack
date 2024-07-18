@@ -1,5 +1,4 @@
-// import { Link } from 'react-router-dom'
-// import NotAcessimg from './../../assets/403.svg'
+
 import { Button, Result } from 'antd'
 const AccessDenied = () => {
     return (

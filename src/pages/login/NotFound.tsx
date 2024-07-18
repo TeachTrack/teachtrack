@@ -1,5 +1,4 @@
-// import { Link } from "react-router-dom"
-// import NotPageimg from "./../../assets/404.svg"
+
 
 import { Button, Result } from "antd"
 
