@@ -1,10 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { createContext, PropsWithChildren, ReactNode, useContext, useEffect, useState } from "react";
 import { useLocalStorage } from "react-use";
 import { defaultLocale, getTranslator, ValidLocale } from "../i18n/i18n.ts";
 
-type TranslationParams = {
+export type TranslationParams = {
   [key: string]: string | number;
 };
 
@@ -22,7 +20,7 @@ const LocaleContext = createContext<ITranslationContext>({} as ITranslationConte
 
 export const useLocaleContext = () => useContext(LocaleContext);
 
-function useDelayedRender<T>(asyncFun: () => Promise<T>, deps: any = []) {
+function useDelayedRender<T>(asyncFun: () => Promise<T>, deps: ValidLocale[] = []) {
   const [output, setOutput] = useState<T>();
 
   useEffect(() => {
@@ -35,15 +33,15 @@ function useDelayedRender<T>(asyncFun: () => Promise<T>, deps: any = []) {
     })();
   }, deps);
 
-  return output === undefined ? null : output;
+  return output ?? null;
 }
 
 export const LocaleContextProvider = ({ children }: PropsWithChildren<ITranslationProps>) => {
   const [lang, setLang] = useLocalStorage<ValidLocale>("lang", defaultLocale);
-  const currentLang = lang || defaultLocale;
+  const currentLang: ValidLocale = lang || defaultLocale;
 
   return useDelayedRender(async () => {
-    const translate = await getTranslator(currentLang, []);
+    const translate = await getTranslator(currentLang);
     const value = {
       t: translate,
       setLang,
