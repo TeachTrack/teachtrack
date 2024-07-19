@@ -14,5 +14,13 @@
     "phone_number": "Ваш номер телефона",
     "password": "Пароль",
     "login": "Войти"
+  },
+  "error_pages": {
+    "access_denied_message": "Вы не имеете доступа к этой странице.",
+    "not_found_message": "Страница, которую вы искали, не найдена.",
+    "server_error_message": "Проблема с сервером."
+  },
+  "common": {
+    "go_back": "Возвращаться"
   }
 }
