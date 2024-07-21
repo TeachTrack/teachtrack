@@ -1,28 +1,34 @@
 import React from "react";
 import type { MenuProps } from "antd";
-import { Dropdown, Flex, Space } from "antd";
+import { Dropdown, Space } from "antd";
 import { ZhihuOutlined } from "@ant-design/icons";
 import UzbFlag from "./../../../../public/uzb.svg";
 import RusFlag from "./../../../../public/rus.svg";
 import { useLocaleContext } from "../../../context/locale.context";
 
+// Define changeLanguage outside the component and use useCallback for optimization
+const changeLanguage = (language: string) => {
+  localStorage.setItem("language", language); // Save the language to localStorage
+  window.location.reload();
+};
+
 const items: MenuProps["items"] = [
   {
     label: (
-      <Flex gap="middle">
+      <Space>
         <img src={UzbFlag} alt="Uzb" width={30} height={20} />
         O'zbek
-      </Flex>
+      </Space>
     ),
     key: "0",
     onClick: () => changeLanguage("uz"),
   },
   {
     label: (
-      <Flex gap="middle">
+      <Space>
         <img src={RusFlag} alt="Rus" width={30} height={20} />
         Русский
-      </Flex>
+      </Space>
     ),
     key: "1",
     onClick: () => changeLanguage("ru"),
@@ -32,13 +38,13 @@ const items: MenuProps["items"] = [
   },
 ];
 
-const changeLanguage = (language: string) => {
-  localStorage.setItem("language", language); // Tilni localStorage ga saqlash
-  window.location.reload();
-  console.log(`Language changed to: ${language}`);
-};
-
 export const ChangeLanguage: React.FC = () => {
+  const [language, setLanguage] = React.useState(localStorage.getItem("language") || "uz");
+
+  React.useEffect(() => {
+    setLanguage(localStorage.getItem(language) || "uz");
+  }, []);
+
   const { t } = useLocaleContext();
 
   return (
