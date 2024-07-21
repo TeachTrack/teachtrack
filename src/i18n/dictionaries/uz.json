@@ -21,6 +21,9 @@
     "server_error_message": "Server muammosi."
   },
   "common": {
-    "go_back": "Ortga qaytish"
+    "go_back": "Ortga qaytish",
+    "log_in": "Kirish",
+    "log_out": "Chiqish",
+    "change_language": "Tilni o'zgartirish"
   }
 }
