@@ -37,19 +37,14 @@ export const ChangeLanguage: React.FC = () => {
       key: "1",
       onClick: () => changeLanguage("ru"),
     },
-    {
-      type: "divider",
-    },
   ];
 
   return (
     <Dropdown menu={{ items }} trigger={["click"]}>
-      <a onClick={(e) => e.preventDefault()}>
         <Space>
           <ZhihuOutlined />
           {t("common.change_language")}
         </Space>
-      </a>
     </Dropdown>
   );
 };
