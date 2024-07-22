@@ -41,10 +41,10 @@ export const ChangeLanguage: React.FC = () => {
 
   return (
     <Dropdown menu={{ items }} trigger={["click"]}>
-        <Space>
-          <ZhihuOutlined />
-          {t("common.change_language")}
-        </Space>
+      <Space>
+        <ZhihuOutlined />
+        {t("common.change_language")}
+      </Space>
     </Dropdown>
   );
 };
