@@ -3,6 +3,7 @@ import LoginPage from "./pages/login/login";
 import DashboardLayout from "./layout/dashboard-layout/dashboard-layout";
 import PrivateRoute from "./utils/routes/private-routes";
 import { AccessDenied } from "./pages/login/access-denied";
+import { UserRoles } from "./utils/enums/enums";
 
 const App = () => {
   const isLoggedIn = Boolean(localStorage.getItem("token"));
@@ -13,7 +14,7 @@ const App = () => {
         <Route
           path="/dashboard"
           element={
-            <PrivateRoute roles={["admin", "user"]}>
+            <PrivateRoute roles={[UserRoles.ADMIN]}>
               <DashboardLayout>
                 <p>content of layout</p>
               </DashboardLayout>

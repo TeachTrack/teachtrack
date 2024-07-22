@@ -1,10 +1,11 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 import { useGetUser } from "../../react-query/hooks/hooks";
+import { UserRoles } from "../enums/enums";
 
 interface PrivateRouteProps {
   children: React.ReactNode;
-  roles: string[];
+  roles: UserRoles[];
 }
 
 const PrivateRoute: React.FC<PrivateRouteProps> = ({ children, roles }) => {
