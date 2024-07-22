@@ -24,6 +24,7 @@
     "go_back": "Возвращаться",
     "log_in": "Войти",
     "log_out": "Выйти",
-    "change_language": "Изменить язык"
+    "change_language": "Изменить язык",
+    "admin":"Админ"
   }
 }

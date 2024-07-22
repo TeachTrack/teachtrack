@@ -18,7 +18,7 @@ const Header = () => {
           <Avatar />
           <div>
             <p className="text-sm font-medium">Otabek O'ktamov</p>
-            <p className="text-xs">Admin</p>
+            <p className="text-xs">{t("common.admin")}</p>
           </div>
           <Button className="ml-8 font-medium" size="large">
             <HiOutlineLogin className="text-2xl " /> {t("common.log_out")}

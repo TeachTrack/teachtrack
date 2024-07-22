@@ -24,6 +24,7 @@
     "go_back": "Ortga qaytish",
     "log_in": "Kirish",
     "log_out": "Chiqish",
-    "change_language": "Tilni o'zgartirish"
+    "change_language": "Tilni o'zgartirish",
+    "admin":"Admin"
   }
 }
