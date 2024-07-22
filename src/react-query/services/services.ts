@@ -1,5 +1,6 @@
-import { axiosInstanceWithoutToken } from "../../services/axios-config";
+import axiosInstance, { axiosInstanceWithoutToken } from "../../services/axios-config";
 import { ILoginForm } from "../../utils/interfaces/auth.interface";
+import { IUser } from "../../utils/interfaces/user.interface";
 
 class APIServices {
   /**
@@ -10,6 +11,11 @@ class APIServices {
   async login(loginValue: ILoginForm) {
     const res = await axiosInstanceWithoutToken.post("/auth/login/", loginValue);
     return res;
+  }
+
+  async getMe() {
+    const res = await axiosInstance.get("/me");
+    return res.data as IUser;
   }
 }
 

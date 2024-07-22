@@ -14,5 +14,13 @@
     "phone_number": "Telefon raqamingiz",
     "password": "Parol",
     "login": "Kirish"
+  },
+  "error_pages": {
+    "access_denied_message": "Bu sahifaga kirishga uchun ruxstaingiz yo'q.",
+    "not_found_message": "Siz qidirgan sahifa topilmadi.",
+    "server_error_message": "Server muammosi."
+  },
+  "common": {
+    "go_back": "Ortga qaytish"
   }
 }

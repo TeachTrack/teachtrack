@@ -1,26 +1,27 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/login/login";
 import DashboardLayout from "./layout/dashboard-layout/dashboard-layout";
+import PrivateRoute from "./utils/routes/private-routes";
+import { AccessDenied } from "./pages/login/access-denied";
 
 const App = () => {
-  //User get me togirlangandan keyin user orqali tekshiriladi token orqali emas
   const isLoggedIn = Boolean(localStorage.getItem("token"));
-
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/*" element={<Navigate to={isLoggedIn ? "/dashboard" : "/login"} />} />
         <Route
-          path="/*"
+          path="/dashboard"
           element={
-            isLoggedIn ? (
+            <PrivateRoute roles={["admin", "user"]}>
               <DashboardLayout>
                 <p>content of layout</p>
               </DashboardLayout>
-            ) : (
-              <LoginPage />
-            )
+            </PrivateRoute>
           }
         />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/not-access" element={<AccessDenied />} />
       </Routes>
     </BrowserRouter>
   );

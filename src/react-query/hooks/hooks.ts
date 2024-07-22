@@ -1,4 +1,4 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import { ILoginForm } from "../../utils/interfaces/auth.interface";
 import APIServices from "../services/services";
 
@@ -12,4 +12,11 @@ const useLogin = () => {
   });
 };
 
-export { useLogin };
+const useGetUser = () => {
+  return useQuery({
+    queryKey: ["userInfo"],
+    queryFn: () => APIServices.getMe(),
+  });
+};
+
+export { useLogin, useGetUser };
