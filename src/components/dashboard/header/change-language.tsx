@@ -5,12 +5,13 @@ import { ZhihuOutlined } from "@ant-design/icons";
 import UzbFlag from "./../../../../public/uzb.svg";
 import RusFlag from "./../../../../public/rus.svg";
 import { useLocaleContext } from "../../../context/locale.context";
+import { ValidLocale } from "../../../i18n/i18n";
 
 export const ChangeLanguage: React.FC = () => {
   const { t, setLang } = useLocaleContext();
 
   const changeLanguage = useCallback(
-    (language: string) => {
+    (language: ValidLocale) => {
       setLang(language);
     },
     [setLang],
