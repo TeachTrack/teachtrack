@@ -23,7 +23,9 @@ const Header = () => {
           <Button className="ml-8 font-medium" size="large">
             <HiOutlineLogin className="text-2xl " /> {t("common.log_out")}
           </Button>
-          <ChangeLanguage />
+          <Button className="ml-1 font-medium" size="large">
+            <ChangeLanguage />
+          </Button>
         </div>
       </div>
     </div>
