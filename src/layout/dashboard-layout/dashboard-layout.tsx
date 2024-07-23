@@ -10,9 +10,11 @@ const DashboardLayout = ({ children }: IDashboardLayoutProps) => {
   return (
     <div className="bg-gray200 h-screen">
       <Header />
-      <div className="flex h-screen">
-        <Sidebar />
-        <div>{children}</div>
+      <div className="flex h-screen w-full">
+        <div>
+          <Sidebar />
+        </div>
+        <div className="mt-24 w-full px-4">{children}</div>
       </div>
     </div>
   );

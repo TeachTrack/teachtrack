@@ -7,13 +7,17 @@
     "courses": "Kurslar",
     "transactions": "To'lovlar",
     "contracts": "Shartnomalar",
-    "notifications": "Xabarlar"
+    "notifications": "Xabarlar",
+    "school": "Maktab",
+    "schools_list": "Maktablar Ro'yhati"
   },
   "login": {
     "login_to_crm": "Boshqaruv paneliga kirish",
     "phone_number": "Telefon raqamingiz",
     "password": "Parol",
-    "login": "Kirish"
+    "login": "Kirish",
+    "phone_number_required": "Telfon raqamni kiritish majburiy",
+    "password_required": "Parolni kiritish majburiy"
   },
   "error_pages": {
     "access_denied_message": "Bu sahifaga kirishga uchun ruxstaingiz yo'q.",
@@ -25,6 +29,6 @@
     "log_in": "Kirish",
     "log_out": "Chiqish",
     "change_language": "Tilni o'zgartirish",
-    "admin":"Admin"
+    "admin": "Admin"
   }
 }

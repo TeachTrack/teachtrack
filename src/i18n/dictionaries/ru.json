@@ -7,13 +7,17 @@
     "courses": "Курсы",
     "transactions": "Транзакции",
     "contracts": "Контракты",
-    "notifications": "Уведомления"
+    "notifications": "Уведомления",
+    "school": "Школа",
+    "schools_list": "Список школ"
   },
   "login": {
     "login_to_crm": "Вход в панель управления",
     "phone_number": "Ваш номер телефона",
     "password": "Пароль",
-    "login": "Войти"
+    "login": "Войти",
+    "phone_number_required": "Ввод номера телефона обязателен",
+    "password_required": "Необходим пароль"
   },
   "error_pages": {
     "access_denied_message": "Вы не имеете доступа к этой странице.",
@@ -25,6 +29,6 @@
     "log_in": "Войти",
     "log_out": "Выйти",
     "change_language": "Изменить язык",
-    "admin":"Админ"
+    "admin": "Админ"
   }
 }
