@@ -64,7 +64,15 @@ const Schools = () => {
     limit: 10,
     page: 1,
   });
-  const { data } = useGetSchools(params);
+  const { data, refetch, isLoading, isRefetching } = useGetSchools(params);
+
+  const handlePaginationChange = (page: number, pageSize: number) => {
+    setParams({
+      page: page,
+      limit: pageSize,
+    });
+    refetch();
+  };
 
   return (
     <div>
@@ -73,10 +81,10 @@ const Schools = () => {
         <Button size="large">Maktab Yaratish</Button>
       </div>
       <div className="mt-4">
-        <Table className="border rounded" columns={columns} dataSource={data?.data || []} pagination={false} />
+        <Table loading={isLoading || isRefetching} className="border rounded" columns={columns} dataSource={data?.data || []} pagination={false} />
       </div>
       <div className="mt-4 bg-white rounded border p-2">
-        <Pagination current={params.page} pageSize={params.limit} />
+        <Pagination current={params.page} pageSize={params.limit} defaultCurrent={params.page} onChange={handlePaginationChange} />
       </div>
     </div>
   );
